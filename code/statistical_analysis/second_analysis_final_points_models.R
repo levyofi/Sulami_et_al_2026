@@ -4,7 +4,7 @@ library(ggplot2)
 library(ggeffects)
 
 options(ggeffects_margin = "empirical")
-data = read.csv("20_pixels_per_map_data.csv", stringsAsFactors = T)
+data = read.csv("code/statistical_analysis/20_pixels_per_map_data.csv", stringsAsFactors = T)
 data$se = data$errors^2
 
 # solar radiation
@@ -18,7 +18,7 @@ names(df_p_solar) = c("size", "predicted", "std.error", "conf.low", "conf.high",
 save(df_p_solar, file = "predicted_solar.RData")
 
 # TGI
-#effect of solar radiation and size - see points_stats_solar.R for model selection
+#effect of solar radiation and size - see points_stats_TGI.R for model selection
 TGI_data = data %>% filter(feature=="TGI")
 model_TGI = bam(se~s(size, k=8) + s(value)+ s(Map, bs='re') + s(x, y), data = TGI_data, family = Gamma(link="log"))
 summary(model_TGI)
@@ -28,7 +28,7 @@ names(df_p_TGI) = c("size", "predicted", "std.error", "conf.low", "conf.high", "
 save(df_p_TGI, file = "predicted_TGI.RData")
 
 # skyview
-#effect of solar radiation and size - see points_stats_solar.R for model selection
+#effect of solar radiation and size - see points_stats_skyview.R for model selection
 skyview_data = data %>% filter(feature=="skyview")
 model_skyview = bam(se~s(size, value)+ s(Map, bs='re') + s(x, y), data = skyview_data, family = Gamma(link="log"))
 summary(model_skyview)
@@ -38,7 +38,7 @@ names(df_p_skyview) = c("size", "predicted", "std.error", "conf.low", "conf.high
 save(df_p_skyview, file = "predicted_skyview.RData")
 
 
-#effect of solar radiation and size - see points_stats_solar.R for model selection
+#effect of solar radiation and size - see points_stats_slope_sd.R for model selection
 slope_sd_data = data %>% filter(feature=="slope")
 model_slope_sd = bam(se~s(size, value)+ s(Map, bs='re') + s(x, y), data = slope_sd_data, family = Gamma(link="log"))
 summary(model_slope_sd)
