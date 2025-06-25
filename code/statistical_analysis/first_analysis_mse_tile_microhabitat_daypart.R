@@ -5,7 +5,7 @@ library(lubridate)
 library(stringr)
 
 #get the name of files with the errors of each model. These files were created by the "/Users/ofir/Dropbox/pycharm_projects/Sulami_et_al_Ecology/code/MicroclimateModelAnalysis.py" file
-files = dir("~/Dropbox/pycharm_projects/Sulami_et_al_Ecology", pattern = "error_maps_model_size.*.csv", full.names = T)
+files = dir("predicted_maps", pattern = "error_maps_model_size.*.csv", full.names = T)
 
 
 # Read each CSV into a list of data frames
