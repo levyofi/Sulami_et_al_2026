@@ -19,7 +19,7 @@ MAX_CONCURRENT = 5
 scripts = []
 for s in spatial_sizes:
   for b in bacth_sizes:
-    scripts.append(f'model_trainer.py --size={s} --batch_size={b}')
+    scripts.append(f'code/model_trainer.py --size={s} --batch_size={b}')
 
 # fire off up-to MAX_CONCURRENT subprocesses...
 tasks = list()
