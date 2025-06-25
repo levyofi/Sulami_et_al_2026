@@ -1,0 +1,2 @@
+Model,Epochs,Batch Size,Spatial Size,Best Val Loss,Best Epoch,End Time,Early Stopped
+pixel_resnet18_modified_conv1_unfrozen_grads_size_33_batches_64_100_epochs,100,64,33,0.76857,98,2025-04-20 22:06:40,No

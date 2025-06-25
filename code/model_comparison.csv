@@ -1,0 +1,10 @@
+Model,Epochs,Batch Size,Spatial Size,Best Val Loss,Best Epoch,End Time,Early Stopped
+pixel_resnet18_modified_conv1_unfrozen_grads_size_47_batches_64_100_epochs,100,64,47,0.90244,75,2025-04-14 23:06:54,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_81_batches_64_100_epochs,100,64,81,1.25013,49,2025-04-14 23:22:13,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_63_batches_64_100_epochs,100,64,63,1.03077,95,2025-04-15 01:04:13,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_47_batches_64_100_epochs,100,64,47,0.88451,86,2025-04-15 01:38:11,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_31_batches_64_100_epochs,100,64,31,0.77028,14,2025-04-15 02:42:06,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_21_batches_64_100_epochs,100,64,21,0.68576,15,2025-04-15 04:38:14,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_15_batches_64_100_epochs,100,64,15,0.65139,32,2025-04-15 06:49:52,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_9_batches_64_100_epochs,100,64,9,0.61106,49,2025-04-15 12:01:30,No
+pixel_resnet18_modified_conv1_unfrozen_grads_size_5_batches_64_100_epochs,100,64,5,0.61306,70,2025-04-16 07:43:10,No
