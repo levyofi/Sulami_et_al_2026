@@ -345,16 +345,18 @@ def main():
     parser.add_argument('--size', type=int, required=True, help='Spatial size to filter the models')
     args = parser.parse_args()
 
-    #maps_folder = '/big_data/idan/complete_subimages_cropped'
-    maps_folder = os.path.expanduser("~/Dropbox/idan/complete_subimages_cropped")
+    #maps_folder = '/big_data/idan/complete_subimages_cropped' #location on old server
+    #maps_folder = "/data/idan/complete_subimages_cropped" #location on new server
+    
+    maps_folder = os.path.expanduser("data/submaps_cropped")
     models_folder = os.path.expanduser('models')
     # load the training data
-    trainset_path = os.path.expanduser('~/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/trainset_ofir.pkl')
+    trainset_path = os.path.expanduser('data/trainset_ofir.pkl')
     # check the range of temperatures in each train map
     trainset = Dataset.load_data(trainset_path)
     print("Dataset Loaded")
     # get the data of the desert maps
-    maps_csv = os.path.expanduser('~/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/desert_maps.csv')
+    maps_csv = os.path.expanduser('data/desert_maps.csv')
 
     #Testing the code
     spatial_size = args.size

@@ -20,8 +20,8 @@ import torch.nn.functional as F
 
 from dataset_creator import Dataset
 
-trainset_path = '/home/ofir/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/trainset_ofir.pkl'
-testset_path = '/home/ofir/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/testset_ofir.pkl'
+trainset_path = 'data/trainset_ofir.pkl'
+testset_path = 'data/testset_ofir.pkl'
 
 #check the range of temperatures in each train map
 trainset = Dataset.load_data(trainset_path)
@@ -34,23 +34,23 @@ for i in range(len(testset)):
     print(testset[i][2].min().item(), testset[i][2].max().item())
 
 #create histograms of the different model features
-# map_types = ['height', 'shade', 'real_solar', 'skyview', 'TGI']
-# fig, axes = plt.subplots(2, 3, figsize=(14, 9))
-# for i in range(5):
-#     train_data = torch.cat([trainset.data[j][0][i] for j in range(len(trainset))]).numpy().reshape(-1)
-#     test_data = torch.cat([testset.data[j][0][i] for j in range(len(testset))]).numpy().reshape(-1)
-#     ax = axes[i // 3, i % 3]
-#     sb.histplot(train_data, ax=ax, label='Train', kde=True, bins=20)
-#     sb.histplot(test_data, ax=ax, label='Test', kde=True, color='red', bins=20)
-#     ax.set_title(map_types[i])
-#     ax.legend()
-# plt.tight_layout()
-# plt.show()
-# plt.savefig('FigureS1.png', dpi=300)
+map_types = ['height', 'shade', 'real_solar', 'skyview', 'TGI']
+fig, axes = plt.subplots(2, 3, figsize=(14, 9))
+for i in range(5):
+    train_data = torch.cat([trainset.data[j][0][i] for j in range(len(trainset))]).numpy().reshape(-1)
+    test_data = torch.cat([testset.data[j][0][i] for j in range(len(testset))]).numpy().reshape(-1)
+    ax = axes[i // 3, i % 3]
+    sb.histplot(train_data, ax=ax, label='Train', kde=True, bins=20)
+    sb.histplot(test_data, ax=ax, label='Test', kde=True, color='red', bins=20)
+    ax.set_title(map_types[i])
+    ax.legend()
+plt.tight_layout()
+plt.show()
+plt.savefig('FigureS1.png', dpi=300)
 
 
 #create histograms of the different meteorological features
-WD = '/big_data/idan/complete_subimages_cropped'
+WD = 'data/submaps_cropped'
 #get column names
 met_columns = pd.read_csv(f'{WD}/Zeelim_29.5.19_0830/meteorological_data.csv').columns[1:-3]
 # plot the meteorological data
@@ -65,4 +65,6 @@ for i in range(8):
     ax.legend()
 plt.tight_layout()
 plt.show()
+plt.savefig('FigureS2.png', dpi=300)
+
 

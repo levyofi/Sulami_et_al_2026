@@ -137,7 +137,7 @@ class TrainModel:
         epochs = epochs if epochs else self.epochs
         if model_name=="":
             model_name = '_'.join(self.model_name.split('_')[:-2]) + f'_{epochs}_epochs'
-        torch.save(self.model.state_dict(), f'/data/microclimate_training_data/models/{model_name}.pth')
+        torch.save(self.model.state_dict(), f'/data/models/{model_name}.pth')
 
     def log_summary_to_csv(self, best_val_loss, best_epoch_loss, early_stopped):
         import csv
@@ -216,7 +216,7 @@ def main():
         },
     )
     # load the training data
-    trainset_path = os.path.expanduser('~/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/trainset_ofir.pkl')
+    trainset_path = os.path.expanduser('data/trainset_ofir.pkl')
 
     # check the range of temperatures in each train map
     trainset = Dataset.load_data(trainset_path)

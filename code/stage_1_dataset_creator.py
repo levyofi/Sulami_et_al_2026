@@ -141,18 +141,18 @@ class Dataset(Dataset):
     # add map normalization for the thermal maps based on a number of pixels
 
 def main():
-    WD = '/big_data/idan/complete_subimages_cropped'
+    WD = 'data/submaps_cropped'
 
     # create the train set - 25 flights
     trainset = Dataset(WD)
     trainset.load_maps()
-    trainset_path = '/home/ofir/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/trainset_ofir.pkl'
+    trainset_path = 'data/trainset_ofir.pkl'
     trainset.save_data(trainset_path)
 
     # create the test set - 7 flights
     testset = Dataset(WD, is_train=False, is_validation=True)
     testset.load_maps()
-    testset_path = '/home/ofir/Dropbox/pycharm_projects/Sulami_et_al_Ecology/data/testset_ofir.pkl'
+    testset_path = 'data/testset_ofir.pkl'
     testset.save_data(testset_path)
 
     print("Dataset Creation Ended")
