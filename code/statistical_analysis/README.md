@@ -3,11 +3,13 @@
 This directory contains scripts and data for the statistical analysis of model outputs.
 
 ## Contents
-
-- **20_pixels_per_map_data.csv**: Data file summarizing pixel-level data for each map.
-- **extract_points_for_stat_analysis.R**: R script to extract relevant points for downstream statistical analysis.
-- **final_points_models_and_plots.html**: HTML report summarizing final model points and plots.
+### First analysis:
 - **first_analysis_mse_tile_microhabitat_daypart.R**: R script analyzing model MSE by tile, microhabitat, and daypart.
+### Second analysis:
+#### _Data creation_
+- **extract_points_for_stat_analysis.R**: R script to extract relevant points for downstream statistical analysis.
+- **20_pixels_per_map_data.csv**: Data file with 20 pixels per map for the second analysis. Created by `extract_points_for_stat_analysis.R`.
+#### _Statistical analysis_
 - **points_stats_TGI.R, points_stats_skyview.R, points_stats_solar.R, points_stats_slope_sd.R**: R scripts for various point-based statistical analyses.
 - **second_analysis_final_points_models.R**: R script for advanced/final statistical analyses.
 
