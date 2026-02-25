@@ -1,19 +1,14 @@
-# Incorporating Spatial Information Enhances Microclimate Predictions: Evidence from a Deep-Learning Model
+# Spatially Aware Deep Learning for Microclimate Prediction from High-Resolution Geospatial Imagery
 
-_Idan Sulami, Alon Itzkovitch, Moni Shahar, and
+_Idan Sulami, Alon Itzkovitch, Michael R. Kearney, Moni Shahar, and
 Ofir Levy_
 
 ### Please contact Ofir Levy (levyofir@tauex.tau.ac.il) about the code or data
 
 ## Abstract:
 
-1) Microclimates are critical for understanding how organisms interact with their environments, influencing behaviour, physiology, and species distributions. However, traditional physical heat-balance models for predicting ground temperatures in microhabitats often exhibit biases due to unaccounted environmental complexities and poorly constrained parameters. One of these poor simplifications might be the vaerical-only heat-balance modeling, while ignoring the spatial complixity around the location of interest.
+Microclimate models are essential for linking climate to ecological processes, yet most physically based frameworks estimate temperature independently for each spatial unit and rely on simplified representations of lateral heat exchange. As a result, the spatial scales over which surrounding environmental conditions influence local microclimates remain poorly quantified, particularly in heterogeneous landscapes. Here, we show how remote sensing can help quantify the contribution of spatial context to microclimate temperature predictions. Building on convolutional neural network principles, we designed a task-specific deep neural network and trained a series of models in which the spatial extent of input data was systematically varied. Drone-derived spatial layers and meteorological data were used to predict ground temperature at a focal location, allowing direct assessment of how prediction accuracy changes with increasing spatial context. Our results show that incorporating spatially adjacent information substantially improves prediction accuracy, with diminishing returns beyond spatial extents of approximately 5-7 m. This characteristic scale indicates that ground temperatures are influenced not only by local surface properties, but also by horizontal heat transfer and radiative interactions operating across neighboring microhabitats. The magnitude of spatial effects varied systematically with time of day, microhabitat type, and local environmental characteristics, highlighting context-dependent spatial coupling in microclimate formation. By treating deep learning as a diagnostic tool rather than solely a predictive one, our approach provides a general and transferable method for quantifying spatial dependencies in microclimate models and informing the development of hybrid mechanistic-data-driven approaches that explicitly account for spatial interactions while retaining physical interpretability.
 
-2) In this study, we demonstrate how incorporating spatial information can improve the accuracy of microclimate predictions. Using drone imagery, we generated detailed environmental maps, including solar radiation, vegetation indices, and skyview factors, to .... Validation with thermal maps derived from drone-mounted infrared cameras revealed that ... To address these errors, we applied a random forest machine learning model to predict and correct biases in new prediction maps. 
-
-3) Our results show that deep-learning models that were informed with more spatial information ... We also found that this improvement ... and ....
-
-4) These findings illustrate the potential of incorporating spatial information to improve microclimate predictions. We also how that deep-learning models can be used to show which microhabitats, dayparts and variables are important for .... This findings can provide ecologists and conservation practitioners with a powerful tool to generate accurate, fine-scale microclimate maps, enabling better understanding of species responses to climate change and informing climate-resilient habitat management and conservation strategies. 
 
 
 # **Repository Directory**:
