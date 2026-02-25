@@ -12,12 +12,12 @@ Microclimate models are essential for linking climate to ecological processes, y
 
 
 # **Repository Directory**:
-## See the  `data` subdirectory for data and metadata. [link](https://github.com/levyofi/Sulami_et_al_Ecology/tree/main/data)
+## See the  `data` subdirectory for data and metadata. [link](https://github.com/levyofi/Sulami_et_al_2026/tree/main/data)
 
-## See the `code` subdirectory for codes. [link](https://github.com/levyofi/Sulami_et_al_Ecology/tree/main/code)
+## See the `code` subdirectory for codes. [link](https://github.com/levyofi/Sulami_et_al_2026/tree/main/code)
 
-## See the `models` subdirectory for the trained models for each tile size. [link](https://github.com/levyofi/Sulami_et_al_Ecology/tree/main/models)
+## See the `models` subdirectory for the trained models for each tile size. [link](https://github.com/levyofi/Sulami_et_al_2026/tree/main/models)
 
-## See the `predicted_maps` subdirectory for examples of predicted temperature maps and errors. [link](https://github.com/levyofi/Sulami_et_al_Ecology/tree/main/predicted_maps)
+## See the `predicted_maps` subdirectory for examples of predicted temperature maps and errors. [link](https://github.com/levyofi/Sulami_et_al_2026/tree/main/predicted_maps)
 
 
